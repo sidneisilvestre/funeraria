@@ -18,6 +18,6 @@
 <input type="number" name="preco" id="preco" required />
 <button type="submit" id="b" class="btn btn-primary">Cadastrar </button>
 </form>
-  
+  <a href="gerente.php">Voltar para Home </a>
   </body>
 </html>
