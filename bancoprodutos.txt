@@ -1,5 +1,5 @@
 create database funeraria;
-create table produtos (id int(3) not null auto_increment primary key, produto varchar(200) not null, valor int(10) not null) engine innodb;
+create table produtos (id int(3) not null auto_increment primary key, produto varchar(200) not null, preco int(10) not null) engine innodb;
 insert into produtos (produto,valor) values ("• Véu de luxo específico para ornamentação de urna",800), ("• Ornamentação de urna com flores ou edredom de cetim",1500), ("• Registro de óbito junto ao cartório, bem como toda a documentação create table produtos (id int(3) not null auto_increment primary key, produto varchar(200) not null, valor int(10) not null) engine innodb;
 insert into produtos (produto,valor) values ("• Véu de luxo específico para ornamentação de urna",800), ("• Ornamentação de urna com flores ou edredom de cetim",1500), ("• Registro de óbito junto ao cartório, bem como toda a documentação necessária para o sepultamento",4500), ("• Atendimento humano e profissionalizado",1300), ("• Necromaquiagem",1200);
 
