@@ -8,27 +8,23 @@
 <link rel="stylesheet" href="css/style.css" />
     <title>Funerária Só Falta Você</title>
   </head>
-  <body>
-      <form class="form-signin" method="POST" action="valida.php">
+<body>
+<h1>Faça login no Sistema </h1>
+
+
+<form>
 <div class="form-group">
-<label for="n1">Informe seu nome </label>
-<input name="n1" id="n1" type="text" required autofocus class="form-control" />
+<label for="n1" > Digite seu nome</label>
+<input name="n1" id="n1" type="text" class="form-control" autofocus />
 </div>
 <div class="form-group">
+<label for="n2" > digite sua senha </label>
+<input name="n2" id="n2" type="password" class="form-control" onblur="login()" />
+</div>
 
-<label for="op">Selecione seu perfil </label>
-<select name="op" id="op">
-<option value="">Selecione </option>
-<option value="1">Gerente </option>
-<option value="2">Agente </option>
-<option value="3">Motorista </option>
-</select>
-<label for="pas">Informe sua senha </label>
-<input type="password" name="pas" id="pas" required onblur="login()" />
-<h2 id="s"> <h2>
-<a href="gerente.php" role="button">Fazer login </a>
 </form>
 <a href="esqueciasenha.html">Esqueci a Senha </a>
+<p id="s" aria-live="assertive"> </p>
     <script src="js/jquery-3.4.1.js" ></script>
     <script src="js/bootstrap.bundle.min.js" ></script>
         <script src="js/functions.js" ></script>
