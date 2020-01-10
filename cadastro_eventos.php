@@ -27,8 +27,8 @@ echo "<option>$evento[nome]</option>";
 ?>
 </select>
 
-<label for="cliente">Informe o nome do Cliente</label>
-<input type="text" name="cliente" id="cliente" required autocomplete="full-name" autofocus/>
+<label for="nome">Informe o nome do Cliente</label>
+<input type="text" name="nome" id="nome" required autocomplete="full-name" autofocus/>
 <label for="cpf">Informe o CPF do Cliente</label>
 <input type="tel" name="cpf" id="cpf" required />
 
