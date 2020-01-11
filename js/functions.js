@@ -9,6 +9,6 @@ document.getElementById("s").innerHTML = "<a href='agente.php'>Fazer Login </a>"
 }else if (nome == "motorista" && senha == "123"){
 document.getElementById("s").innerHTML = "<a href='motorista.php'>Fazer Login </a>";
 } else {
-alert("este Usuario ou senha estão inválido");
+document.getElementById("s").innerHTML = "Este usuário ou senha estão inválidos!";
 }
 }
