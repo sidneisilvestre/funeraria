@@ -1,0 +1,203 @@
+create table aluno_21358610
+(
+codigo integer not null,
+nome varchar (60),
+curso char (03) not null,
+sexo char (1),
+salario money
+)
+
+insert into aluno_21358610 (codigo,nome,curso,sexo,salario) values (1,'carolina','adm','f','21:38 17/03/20105000)
+
+create table funcionario_21358610
+(
+codigo integer primary key not null,
+nome varchar(60) not null,
+sexo char(1) check(sexo ='m' or sexo='f'),
+data_cadastro datetime default(getdate()),
+salario money check (salario>5000
+
+))update aluno_21358610 set salario=salario*1.20 where curso='ads' and
+salario>1500
+
+delete from aluno_21358610 where salario<1500
+
+delete from aluno_21358610 where nome like '%a%'
+
+create table paciente_21358610 (
+codigo int primary key,
+nome varchar (60),
+endereco varchar (50),
+cidade varchar (30),
+estado varchar (2),
+email varchar (60),
+sexo char (1) check (sexo='m'or sexo='f'),
+datanasc datetime check(datanasc <=getdate()),
+situacao varchar(07) check(situacao='ativo' or 
+situacao='inativo')
+)
+
+delete from aluno where curso in ('ads','gti')
+
+select nome,datanasc, (year(getdate())-year(datanasc)) from paciente_21358610
+
+select nome, datanasc, (year(getdate())-year(datanasc)) from paciente_21358610
+where (year(getdate())-year(datanasc))>=28
+
+select avg(salario) from aluno_21358610
+
+select curso, salario from aluno_21358610 where salario>(select avg(salario) from aluno_21358610 where (curso='ads'))
+
+select avg (salario), curso from aluno_21358610 group by curso
+
+select * from aluno_21358610 where (salario) between 1000 and 2800
+
+update aluno_21358610 set salario = 5000 where curso='ads'
+
+select profissional.nome, profissional.cargo, cargo.descricao from profissional inner join cargo on profissional.cargo=cargo.codigo
+
+select p.codigo, p.nome, p.cargo from profissional p
+
+select p.codigo, p.nome, p.datanasc,p.cidadenasc,c.descricao from profissional p inner join cargo c on p.cargo = c.codigo
+
+select p.codigo,p.nome,p.datanasc,p.cidadenasc,c.descricao,p.situacao from profissional p inner join cargo c on p.cargo =c.codigo where p.situacao='inativo'
+
+select pa.codigo, pa.nome, pa.endereco, pa.convenio, co.nome, pa.medico, pr.nome, pa.datanasc, pa.status from paciente pa inner join convenio co on pa.convenio = co.codigo inner join profissional pr on pa.medico = pr.codigo
+
+select pa.codigo, pa.nome, pa.endereco, pa.convenio, co.nome, pa.medico, pr.nome, pa.datanasc, pa.status from paciente pa inner join convenio co on pa.convenio = co.codigo inner join profissional pr on pa.medico = pr.codigo where pa.status != 'inativo'
+
+select pa.codigo, pa.nome, pa.endereco, pa.convenio, co.nome, pa.medico, pr.nome, pa.datanasc, pa.status, ca.descricao from paciente pa inner join convenio co on pa.convenio = co.codigo inner join profissional pr on pa.medico = pr.codigo inner join cargo ca on pr.cargo = ca.codigo where pa.status !='inativo'
+
+12/5/2010
+
+este comando altera a estrutura da tabela adicionando um novo campo
+
+alter table departamento_21358610 add sigla char (4)
+
+create table funcionario_21358610 (
+codigo int primary key,
+nome varchar (60) not null,
+endereco varchar (50) not null,
+email varchar (30),
+depto int not null,
+sigla char (4) not null,
+foreign key (depto, sigla) references departamento_21358610)
+
+create table departamento_21358610 (
+codigo int,
+descricao varchar (30),
+sigla char (04),
+primary key(codigo, sigla))
+
+alter table funcionario_21358610 add salario money
+
+update funcionario_21358610 set salario = 1000 where codigo = 1
+
+insert into funcionario_21358610 (codigo, nome, endereco, email, depto, sigla)
+values (1,'adilson','al. santos','agomes@cusa.canon.com'1,'ti')
+
+19/5/2010
+
+create table cliente_21358610 (
+codigo int primary key,
+nome varchar (60),
+endereco varchar (60),
+cidade varchar (30),
+uf char (2),
+documento varchar (20)
+)
+
+create table vendedor_21358610 (
+codigo int primary key,
+nome varchar (60),
+salario money,
+comissao decimal (12,4)
+)
+
+create table produto_21358610 (
+codigo int primary key,
+descricao varchar (60),
+unidade varchar (5),
+valor_unit money
+)
+
+create table pedido_21358610 (
+numero int primary key,
+dt_entrega datetime,
+cd_cliente int,
+cd_vendedor int,
+foreign key (cd_cliente) references cliente_21358610(codigo),
+foreign key (cd_vendedor) references vendedor_21358610 (codigo)
+)
+
+create table item_pedido_21358610 (
+nr_pedido int,
+cd_produto int,
+quantidade int,
+foreign key (nr_pedido) references pedido_21358610 (numero),
+foreign key (cd_produto) references produto_21358610 (codigo),
+primary key (nr_pedido, cd_produto)
+)
+
+alter table cliente_21358610 add ativo char (1)
+
+alter table cliente_21358610 add email varchar (60)
+
+alter table vendedor_21358610 add ativo char (1)
+
+alter table vendedor_21358610 add meta money
+
+alter table produto_21358610 add ativo char (1)
+alter table produto_21358610 add qtde_estoque float
+
+alter table pedido_21358610 add dt_pedido datetime
+
+alter table item_pedido_21358610 add valor_unit money
+
+insert into produto_21358610
+values (1,'impressora','un',800,'s',10)
+insert into produto_21358610
+values (2,'scanner','un',1300,'s',350)
+insert into produto_21358610
+values (3,'teclado','un',18,'n',1350)
+insert into produto_21358610
+values (4,'mouse','un',96,'n',7500)
+insert into produto_21358610
+values (5,'toner','un',1000,'s',130000)
+insert into produto_21358610
+values (6,'monitor','un',900,'s',150000)
+insert into produto_21358610
+values (7,'web cam','pc',320,'s',70)
+insert into produto_21358610
+values (8,'fone de ouvido','pc',10,'n',30)
+insert into produto_21358610
+values (9,'microphone','un',20,'s',90)
+insert into produto_21358610
+values (10,'estabilizador','un',47,'s',40)
+
+insert into pedido_21358610
+values (1,'2010-11-21',3,3,'2010-10-30')
+insert into pedido_21358610
+values (2,'2010-01-10',2,3,'2010-12-28')
+insert into pedido_21358610
+values (3,'2010-02-11',1,2,'2010-01-10')
+insert into pedido_21358610
+values (4,'2010-12-20',1,1,'2010-11-28')
+insert into pedido_21358610
+values (5,'2010-03-20',2,1,'2010-01-01')
+insert into pedido_21358610
+values (6,'2007-05-18',1,3,'2007-05-01')
+insert into pedido_21358610
+values (7,'2007-04-08',2,2,'2007-03-10')
+insert into pedido_21358610
+values (8,'2010-08-08',3,3,'2010-03-02')
+insert into pedido_21358610
+values (9,'2008-07-20',2,2,'2008-04-01')
+insert into pedido_21358610
+values (10,'2010-12-16',3,1,'2010-05-04')
+
+select distinct cd_vendedor from pedido_21358610
+
+select cd_cliente, count (*) from pedido_21358610 group by cd_cliente
+
+
