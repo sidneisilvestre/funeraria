@@ -14,10 +14,10 @@
 <ul>
 <?php 
 $cx = new mysqli ("localhost","root","","funeraria");
-$eventos= $cx->query ("select * from eventos order by nome");
+$eventos= $cx->query ("select * from eventos order by id");
 /*busca os dados no banco */
 while ($evento = $eventos->fetch_assoc()){
-echo "<li>$evento[nome] - $evento[valor]</li>";
+echo "<li>$evento[nome] - $evento[receita] - $evento[despesa]</li>";
 }
 ?>
 </ul>
