@@ -50,7 +50,7 @@ $cx = new mysqli ("localhost","root","","funeraria");
 $produtos= $cx->query ("select * from produtos order by nome");
 /*busca os dados no banco */
 while ($produto = $produtos->fetch_assoc()){
-echo "<input type='checkbox' id='produ[$produto[id]]' name='produ[$produto[id]]' value='produ[$produto[id]]' /><label for='produ[$produto[id]]'>$produto[nome] - $produto[preco]</label>";
+echo "<input type='checkbox' id='produ[$produto[id]]' name='produ[$produto[id]]' value='[$produto[id]]' /><label for='produ[$produto[id]]'>$produto[nome] - $produto[preco]</label>";
 }
 ?>
 </fieldset>
