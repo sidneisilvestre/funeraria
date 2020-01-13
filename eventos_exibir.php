@@ -12,19 +12,21 @@
   <h1 id="conteudo">Produtos e Serviços disponíveis para você </h1>
 <p> exiba aqui nossos clientes já cadastrados!!!</p>
 
-<ul>
+<table>
+<thead><tr><th scope="col">Nome</th><th scope="col">Produtos escolhidos</th></tr></thead>
+<tbody>
 <?php 
 $cx = new mysqli ("localhost","root","","funeraria");
 $eventos= $cx->query ("select * from eventos order by nome");
 /*busca os dados no banco */
 while ($evento = $eventos->fetch_assoc()){
-echo "<li>$evento[nome]</li>";
+echo "<tr><th scope='row'>$evento[nome]</th><td>$evento[produto_id]</td></tr>";
 }
 ?>
+</tbody>
+</table>
 
-</ul>
-
-
+<button onclick="javascript:history.back()">Voltar</button>
   
   </body>
 </html>

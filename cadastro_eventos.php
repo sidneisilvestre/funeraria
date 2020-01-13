@@ -10,12 +10,12 @@
   </head>
   <body>
   <h1 id="conteudo">Cadastro de eventos em construção </h1>
-<p>Informe abaixo os dados do cliente que será cadastrado. </p>
+<p>Utilize  o formulário abaixo para abrir uma nova solicitação de evento. </p>
 <form action="eventos_cadastro.php" method="post">
 
 
 <label for="mat">Selecione um Cliente cadastrado ou adicione um novo</label>
-<select name="mat" id="mat" autofocus/>
+<select id="mat" autofocus/>
 <option value="">Novo Cliente</option> 
 <?php 
 $cx = new mysqli ("localhost","root","","funeraria");
@@ -26,6 +26,7 @@ echo "<option>$evento[nome]</option>";
 }
 ?>
 </select>
+
 
 <label for="nome">Informe o nome do Cliente</label>
 <input type="text" name="nome" id="nome" required autocomplete="full-name" autofocus/>
@@ -49,9 +50,7 @@ $cx = new mysqli ("localhost","root","","funeraria");
 $produtos= $cx->query ("select * from produtos order by nome");
 /*busca os dados no banco */
 while ($produto = $produtos->fetch_assoc()){
-echo "<label for=''>$produto[nome] - $produto[preco] </label>
-<input type='checkbox' name='produ' id='produ' value='produ' />
-";
+echo "<input type='checkbox' id='produ[$produto[id]]' name='produ[$produto[id]]' value='produ[$produto[id]]' /><label for='produ[$produto[id]]'>$produto[nome] - $produto[preco]</label>";
 }
 ?>
 </fieldset>
