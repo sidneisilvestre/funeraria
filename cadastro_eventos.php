@@ -9,23 +9,10 @@
     <title> Cadastro de eventos </title>
   </head>
   <body>
-  <h1 id="conteudo">Cadastro de eventos em construção </h1>
-<p>Utilize  o formulário abaixo para abrir uma nova solicitação de evento. </p>
+  <h1 id="conteudo">Cadastro de eventos </h1>
+<p>Utilize  o formulário abaixo para abrir uma nova solicitação de evento  ou cadastrar um plano de contratação. </p>
 <form action="eventos_cadastro.php" method="post">
 
-
-<label for="mat">Selecione um Cliente cadastrado ou adicione um novo</label>
-<select id="mat" autofocus/>
-<option value="">Novo Cliente</option> 
-<?php 
-$cx = new mysqli ("localhost","root","","funeraria");
-$eventos= $cx->query ("select * from eventos order by nome");
-/*busca os dados no banco */
-while ($evento = $eventos->fetch_assoc()){
-echo "<option>$evento[nome]</option>";
-}
-?>
-</select>
 
 
 <label for="nome">Informe o nome do Cliente</label>

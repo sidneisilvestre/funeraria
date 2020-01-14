@@ -10,7 +10,7 @@
   </head>
   <body>
 <header>  
-<div class="row"><div id="topo">
+<div class="row"><div>
 <?php include("topo_agente.php"); ?>
 </div>
 </div>
@@ -22,7 +22,7 @@
 </div>
 </div>
   </header>
-  <main id="conteudo">
+  <main>
 <?php include("conteudo.php"); ?>
     <script src="js/jquery-3.4.1.js" ></script>
     <script src="js/bootstrap.bundle.min.js" ></script>

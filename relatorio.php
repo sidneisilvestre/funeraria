@@ -17,7 +17,7 @@ $cx = new mysqli ("localhost","root","","funeraria");
 $eventos= $cx->query ("select * from eventos order by id");
 /*busca os dados no banco */
 while ($evento = $eventos->fetch_assoc()){
-echo "<li>$evento[nome] - $evento[receita] - $evento[despesa]</li>";
+echo "<li>$evento[nome] - $evento[receita]</li>";
 }
 ?>
 </ul>

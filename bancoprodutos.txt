@@ -5,3 +5,7 @@ insert into produtos (produto,valor) values ("• Véu de luxo específico para orna
 
 necessária para o sepultamento",4500), ("• Atendimento humano e profissionalizado",1300), ("• Necromaquiagem",1200);
 
+
+
+insert into eventos (nome,cpf,telefone1,telefone2,email,produto_id,receita) values ('zé ninguém','343','443333321','44445','t344@vail.com','caixão, caixãozinho','12000,00');
+

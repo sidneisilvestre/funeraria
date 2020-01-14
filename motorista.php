@@ -14,7 +14,7 @@
 <?php include("topo_motorista.php"); ?>
 </div>
 </div>
-<div class="row"><div class="col-3">  <div id="menu">
+<div class="row"><div class="col-3">  <div>
   <?php include("menu.php"); ?>
   </div>
 </div>
@@ -22,7 +22,7 @@
 </div>
 </div>
   </header>
-  <main id="conteudo">
+  <main>
 <?php include("conteudo.php"); ?>
     <script src="js/jquery-3.4.1.js" ></script>
     <script src="js/bootstrap.bundle.min.js" ></script>

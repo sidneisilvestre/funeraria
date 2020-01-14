@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Ôªø<!DOCTYPE html>
 <html lang="pt-br">
   <head>
         <meta charset="utf-8">
@@ -12,22 +12,22 @@
   <h1 id="conteudo">Cadastro dos eventos atendidos</h1>
 <form action="atendimentos_cadastro.php" method="post">
 <label for ="ev">Selecione um Evento cadastrado para atendimento</label>
-<select name="ev" id="ev"/>
+<select name="ev" id="ev" autofocus />
 <?php 
 $cx = new mysqli ("localhost","root","","funeraria");
 $eventos= $cx->query ("select * from eventos order by nome");
 while ($evento = $eventos->fetch_assoc()){
-echo "<option value='evento[id]'>$evento[nome]</option>";
+echo "<option value='evento[$evento[id]]'>$evento[nome]</option>";
 }
 ?>
 </select>
 <label for="km">Informe a Quilometragem percorrida </label>
-<imput type="number" name="km" id="km" />
+<input type="number" name="km" id="km" />
 <label for="desp">Informe a despesa total  </label>
-<imput type="number" name="despesa" id="desp" />
-<label for="obs">Õnforme os Ìtens que foram comprados </label>
-<imput type="number" name="obs" id="obs" />
+<input type="number" name="despesa" id="desp" />
+<label for="obs"> Informe os demais √≠tens ou servi√ßos que foram adquiridos durante este atendimento </label>
+<input type="text" name="obs" id="obs" />
 <button type="submit" id="b" class="btn btn-primary">Cadastrar </button>
-</for>
+</form>
 </body>
 </html>
