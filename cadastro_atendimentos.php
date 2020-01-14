@@ -10,7 +10,7 @@
   </head>
   <body>
   <h1 id="conteudo">Cadastro dos eventos atendidos</h1>
-<form action="eventos_cadastro.php" method="post">
+<form action="atendimentos_cadastro.php" method="post">
 <label for ="ev">Selecione um Evento cadastrado para atendimento</label>
 <select name="ev" id="ev"/>
 <?php 
@@ -23,12 +23,11 @@ echo "<option value='evento[id]'>$evento[nome]</option>";
 </select>
 <label for="km">Informe a Quilometragem percorrida </label>
 <imput type="number" name="km" id="km" />
-<label for="lit">Informe quantos litros  de combustível foram gasto </label>
-<imput type="number" name="lit" id="lit" />
-<label for="desp">Ínforme se ouve despeza com mecânico </label>
-<imput type="number" name="desp" id="desp" />
-<label for="out">Acrescente outras despezas se houver</label>
-imput type="number" name="out" id="out" />
+<label for="desp">Informe a despesa total  </label>
+<imput type="number" name="despesa" id="desp" />
+<label for="obs">Ínforme os ítens que foram comprados </label>
+<imput type="number" name="obs" id="obs" />
+<button type="submit" id="b" class="btn btn-primary">Cadastrar </button>
 </for>
 </body>
 </html>
