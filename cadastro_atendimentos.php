@@ -17,18 +17,18 @@
 $cx = new mysqli ("localhost","root","","funeraria");
 $eventos= $cx->query ("select * from eventos order by nome");
 while ($evento = $eventos->fetch_assoc()){
-echo "<option>$evento[nome]</option value='$evento[id]'>";
+echo "<option value='evento[id]'>$evento[nome]</option>";
 }
 ?>
 </select>
-<label for="km!> informe a kilometragem percorrida.</label>
-<imput type="number"> name="km"> id="km";
-<label for="l"> informe quantos litros  de combustível foi gasto.</label>
-<imput type="number"> name="l"> id="l;
-<label for="desp"> informe se ouve despeza com mecânico</label>
-<imput type="text"> name="desp"> id="desp";
-<label for="out"> acrescente outras despezas se houver</label>
-imput type="text"> name="out"> id="out";
+<label for="km">Informe a Quilometragem percorrida </label>
+<imput type="number" name="km" id="km" />
+<label for="lit">Informe quantos litros  de combustível foram gasto </label>
+<imput type="number" name="lit" id="lit" />
+<label for="desp">Ínforme se ouve despeza com mecânico </label>
+<imput type="number" name="desp" id="desp" />
+<label for="out">Acrescente outras despezas se houver</label>
+imput type="number" name="out" id="out" />
 </for>
 </body>
 </html>
