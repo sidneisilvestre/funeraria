@@ -9,11 +9,12 @@
     <title>Cadastro dos atendimentos</title>
   </head>
   <body>
-  <h1 id="conteudo">Cadastro dos eventos atendidos</h1>
+  <h1 id="conteudo">Cadastro de atendimentos</h1>
+  <h2>Próximos Atendimentos a serem atendidos </h2>
 <form action="atendimentos_cadastro.php" method="post">
 <label for ="ev">Selecione um Evento cadastrado para atendimento</label>
 <select name="ev" id="ev" autofocus />
-<?php 
+<?php '
 $cx = new mysqli ("localhost","root","","funeraria");
 $eventos= $cx->query ("select * from eventos order by nome");
 while ($evento = $eventos->fetch_assoc()){
@@ -29,5 +30,15 @@ echo "<option value='evento[$evento[id]]'>$evento[nome]</option>";
 <input type="text" name="obs" id="obs" />
 <button type="submit" id="b" class="btn btn-primary">Cadastrar </button>
 </form>
+<h2>Eventos que já foram atendidos </h2>
+/*
+<?php '
+$cx = new mysqli ("localhost","root","","funeraria");
+$eventos= $cx->query ("select * from eventos order by id");
+while ($evento = $eventos->fetch_assoc()){
+echo "<li>$evento[nome]</li>";
+}
+?>
+*/
 </body>
 </html>

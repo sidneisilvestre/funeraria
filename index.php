@@ -24,7 +24,7 @@
 
 </form>
 <a href="esqueciasenha.html">Esqueci a Senha </a>
-<p id="s" aria-live="assertive"> </p>
+<p id="s"> </p>
     <script src="js/jquery-3.4.1.js" ></script>
     <script src="js/bootstrap.bundle.min.js" ></script>
         <script src="js/functions.js" ></script>
