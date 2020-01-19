@@ -2,11 +2,12 @@ create database funeraria;
 
 create table produtos (id int(3) not null auto_increment primary key, nome varchar(200) not null, preco_venda decimal(10.2) not null, preco_compra decimal(10.2) not null) engine innodb;
 
-create table clientes (id int(9) not null auto_increment primary key, nome varchar(80) not null, cpf char(14) not null, telefone1 int(20) not null, telefone2 int(20) not null, email varchar(90) not null) engine innodb;
+create table clientes (id int(3) not null auto_increment primary key, nome varchar(80) not null, cpf char(14) not null, telefone1 int(20) not null, telefone2 int(20) not null, email varchar(90) not null) engine innodb;
 
 create table despesas (id int(3) not null auto_increment primary key, km int(7), alimentacao decimal(4,2), pedagio decimal(4.2), combustivel decimal(4,2), mecanica decimal(5,2), obs varchar(100), evento_id int(3) references eventos(id) on update cascade on delete cascade ) engine innodb;
 
-create table eventos (id int(3) not null auto_increment primary key, produto_id int(3) foreign key references produtos(id) not null , cliente_id int(3) foreign key references clientes(id) not null , nome_morto varchar(80) not null, data_evento date note null , on update cascade on delete cascade) engine innodb;
+create table eventos (id int(3) not null auto_increment, nome_morto varchar(80) not null, data_evento date note null, id_cliente int(3) auto_increment, id_produto int(3) auto_increment, foreign key(id_cliente) references clientes(id), foreign key(id_produto) references produtos(id), primary key(id) ) engine innodb;
+
 
 alguns itens pra testes
 

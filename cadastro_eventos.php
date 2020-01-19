@@ -13,21 +13,12 @@
 <p>Utilize  o formulário abaixo para abrir uma nova solicitação de evento  ou cadastrar um plano de contratação. </p>
 <form action="eventos_cadastro.php" method="post">
 
-
-
-<label for="nome">Informe o nome do Cliente</label>
-<input type="text" name="nome" id="nome" required autocomplete="full-name" autofocus/>
 <label for="cpf">Informe o CPF do Cliente</label>
-<input type="tel" name="cpf" id="cpf" required />
-
-<label for="tel1">Informe o telefone do Cliente</label>
-<input type="tel" name="tel1" id="tel1" required autocomplete="tel" />
-
-<label for="tel2">Informe outro telefone do Cliente</label>
-<input type="tel" name="tel2" id="tel2" required autocomplete="tel" />
-
-<label for="email">Informe um e-mail válido do Cliente</label>
-<input type="email" name="email" id="email" required autocomplete="tel" />
+<input type="tel" name="cpf" id="cpf" required autofocus />
+<label for="nome">Informe o nome do Defunto </label>
+<input type="text" name="nome" id="nome" required autocomplete="full-name" />
+<label for="data">Informe a data do evento </label>
+<input type="date" name="data" id="data" required />
 
 <fieldset>
 <legend>Selecione os produtos que o cliente está solicitando</legend>
