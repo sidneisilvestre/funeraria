@@ -20,10 +20,11 @@
 $cx = new mysqli ("localhost","root","","funeraria");
 $eventos= $cx->query ("select * from eventos order by nome");
 while ($evento = $eventos->fetch_assoc()){
-echo "<option value='evento[id]'>$evento[nome]</option>";
-}
-?>
+echo "<option value='evento[id]'>$evento[nome] </option>";
+}?>
+
 </select>
+
 </div>
 
 <div class="form-group">
