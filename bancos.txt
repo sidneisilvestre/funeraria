@@ -6,7 +6,7 @@ create table clientes (id int(3) not null auto_increment primary key, nome varch
 
 create table despesas (id int(3) not null auto_increment primary key, km int(7), alimentacao decimal(4,2), pedagio decimal(4.2), combustivel decimal(4,2), mecanica decimal(5,2), obs varchar(100), evento_id int(3) references eventos(id) on update cascade on delete cascade ) engine innodb;
 
-create table eventos (id int(3) not null auto_increment, nome_morto varchar(80) not null, data_evento date note null, id_cliente int(3) auto_increment, id_produto int(3) auto_increment, foreign key(id_cliente) references clientes(id), foreign key(id_produto) references produtos(id), primary key(id) ) engine innodb;
+create table eventos (id int(3) not null auto_increment, nome_morto varchar(80) not null, data_evento date not null, id_cliente int(3), id_produto int(3), foreign key(id_cliente) references clientes(id), foreign key(id_produto) references produtos(id), primary key(id) ) engine innodb;
 
 
 alguns itens pra testes
