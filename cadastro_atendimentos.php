@@ -10,26 +10,12 @@
   </head>
   <body>
   <h1 id="conteudo">Cadastro de atendimentos</h1>
-  <h2>Próximas demandas a serem atendidas </h2>
+  <h2>Cadastre aqui as despesas geradas pelo evento que você atendeu </h2>
 <form action="atendimentos_cadastro.php" method="post">
 
 <div class="form-group">
-<label for ="ev">Selecione um Evento cadastrado para atendimento</label>
-<select name="ev" id="ev" autofocus />
-<?php
-$cx = new mysqli ("localhost","root","","funeraria");
-$eventos= $cx->query ("select * from eventos order by nome");
-while ($evento = $eventos->fetch_assoc()){
-echo "<option value='evento[id]'>$evento[nome] </option>";
-}?>
-
-</select>
-
-</div>
-
-<div class="form-group">
 <label for="km">Informe a Quilometragem percorrida </label>
-<input type="number" name="km" id="km" class="form-control" />
+<input type="number" name="km" id="km" class="form-control" autofocus />
 </div>
 
 <div class="form-group">
@@ -66,6 +52,18 @@ echo "<option value='evento[id]'>$evento[nome] </option>";
 <label for="pendente"> Pendente de atendimento </label>
 <input type="radio" name="status" id="pendente" value="pendente" />
 </fieldset>
+</div>
+<div class="form-group">
+<label for ="ev">Selecione um Evento cadastrado para atendimento</label>
+<select name="ev" id="ev" />
+<?php
+$cx = new mysqli ("localhost","root","","funeraria");
+$eventos= $cx->query ("select * from eventos order by nome");
+while ($evento = $eventos->fetch_assoc()){
+echo "<option value='evento[id]'>$evento[nome] </option>";
+}?>
+
+</select>
 </div>
 <button type="button" id="b" class="btn btn-primary">Cadastrar Atendimento</button>
 </form>
