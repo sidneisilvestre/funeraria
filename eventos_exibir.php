@@ -17,10 +17,10 @@
 <tbody>
 <?php 
 $cx = new mysqli ("localhost","root","","funeraria");
-$eventos= $cx->query ("select * from eventos order by nome");
+$eventos= $cx->query ("select * from eventos order by nome_morto");
 /*busca os dados no banco */
 while ($evento = $eventos->fetch_assoc()){
-echo "<tr><th scope='row'>$evento[nome]</th><td>$evento[produto_id]</td></tr>";
+echo "<tr><th scope='row'>$evento[nome_morto]</th><td>$evento[id_produto]</td></tr>";
 }
 ?>
 </tbody>

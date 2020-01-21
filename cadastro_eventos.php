@@ -15,6 +15,8 @@
 
 <label for="cpf">Informe o CPF do Cliente</label>
 <input type="tel" name="cpf" id="cpf" required autofocus />
+<p><a href="cadastro_clientes.php" title="link temporário, posteriormente trabalharemos com validação">Caso o cliente não esteja cadastrado, Clique ou pressione enter aqui para iniciar um novo  cadastro de cliente </a></p>
+
 <label for="nome">Informe o nome do Defunto </label>
 <input type="text" name="nome" id="nome" required autocomplete="full-name" />
 <label for="data">Informe a data do evento </label>

@@ -13,7 +13,7 @@
 <p>Utilize  o formulário abaixo para cadastrar um cliente  para  contratação de um evento funerário. </p>
 <form action="clientes_cadastro.php" method="post">
 <label for="nome">Informe o nome do Cliente</label>
-<input type="text" name="nome" id="nome" required autocomplete="full-name" autofocus/>
+<input type="text" name="nome" id="nome" required autocomplete="name" autofocus/>
 <label for="cpf">Informe o CPF do Cliente</label>
 <input type="tel" name="cpf" id="cpf" required />
 
@@ -24,7 +24,7 @@
 <input type="tel" name="tel2" id="tel2" required autocomplete="tel" />
 
 <label for="email">Informe um e-mail válido do Cliente</label>
-<input type="email" name="email" id="email" required autocomplete="tel" />
+<input type="email" name="email" id="email" required/>
 
 <button type="submit" id="b" class="btn btn-primary">Cadastrar</button>
 </form>

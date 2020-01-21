@@ -41,9 +41,23 @@
 
 
 <div class="form-group">
-<label for="obs"> Informe os demais ítens ou serviços que foram adquiridos durante este atendimento </label>
+<label for="obs"> Informe os demais ítens ou serviços que foram consumidos  durante este atendimento </label>
 <input type="text" name="obs" id="obs" class="form-control" />
 </div>
+
+<div class="form-group">
+<label for ="ev">Selecione um Evento cadastrado para atendimento</label>
+<select name="ev" id="ev" />
+<?php
+$cx = new mysqli ("localhost","root","","funeraria");
+$eventos= $cx->query ("select * from eventos order by nome_morto");
+while ($evento = $eventos->fetch_assoc()){
+echo "<option value='evento'>$evento[nome_morto]</option>";
+}
+?>
+</select>
+</div>
+
 <div class="form-group">
 <fieldset>
 <legend>Status de conclusão do atendimento</legend>
@@ -53,18 +67,8 @@
 <input type="radio" name="status" id="pendente" value="pendente" />
 </fieldset>
 </div>
-<div class="form-group">
-<label for ="ev">Selecione um Evento cadastrado para atendimento</label>
-<select name="ev" id="ev" />
-<?php
-$cx = new mysqli ("localhost","root","","funeraria");
-$eventos= $cx->query ("select * from eventos order by nome");
-while ($evento = $eventos->fetch_assoc()){
-echo "<option value='evento[id]'>$evento[nome] </option>";
-}?>
 
-</select>
-</div>
+
 <button type="button" id="b" class="btn btn-primary">Cadastrar Atendimento</button>
 </form>
 
