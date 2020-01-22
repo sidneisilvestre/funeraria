@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
         <meta charset="utf-8">
@@ -49,7 +49,7 @@
 <label for ="ev">Selecione um Evento cadastrado para atendimento</label>
 <select name="ev" id="ev" />
 <?php
-$cx = new mysqli ("localhost","root","","funeraria");
+include_once "conexao.php";
 $eventos= $cx->query ("select * from eventos order by nome_morto");
 while ($evento = $eventos->fetch_assoc()){
 echo "<option value='evento'>$evento[nome_morto]</option>";

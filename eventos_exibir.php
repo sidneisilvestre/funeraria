@@ -16,7 +16,7 @@
 <thead><tr><th scope="col">Nome</th><th scope="col">Produtos escolhidos</th></tr></thead>
 <tbody>
 <?php 
-$cx = new mysqli ("localhost","root","","funeraria");
+include_once "conexao.php";
 $eventos= $cx->query ("select * from eventos order by nome_morto");
 /*busca os dados no banco */
 while ($evento = $eventos->fetch_assoc()){

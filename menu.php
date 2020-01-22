@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <nav>
 <ul class="list-unstyled">
 <li id="menu"><a href="sobre.php">Quem Somos </a></li>

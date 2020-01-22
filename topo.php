@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <a id="topo" href="#menu" accesskey="1">ir para o menu</a>
 <a href="#conteudo" accesskey="2">ir para o conteudo principal</a>
 <a href="#rodape" accesskey="3">ir para o Rodapé</a>

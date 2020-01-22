@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
         <meta charset="utf-8">
@@ -13,7 +13,7 @@
 <p>Veja abaixo o relatório da movimentação financeira da sua empresa. </p>
 <ul>
 <?php 
-$cx = new mysqli ("localhost","root","","funeraria");
+include_once "conexao.php";
 $eventos= $cx->query ("select * from eventos order by id");
 /*busca os dados no banco */
 while ($evento = $eventos->fetch_assoc()){

@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <p id="rodape">informações de contato</p> 
 <adress>
 Av. da Saudade 1000. CEP 01310-300 
