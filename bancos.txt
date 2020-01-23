@@ -12,7 +12,7 @@ create table eventos (id int(3) not null auto_increment primary key, nome_morto 
 
 alguns itens pra testes
 inserindo manualmente em eventos:
-insert into eventos (id,nome_morto,data_evento,id_cliente,id_produto) values ("Zé Ninguém","20/01/2020","1","1");
+insert into eventos (nome_morto,data_evento,id_cliente,id_produto) values ("Zé Ninguém","20/01/2020","1","1");
 
 inserindo manualmente em despesas para testar:
 insert into despesas (nome,km,despesa,obs,evento_id) values ("zé ninguém","50","90","gasolina","caixão");

@@ -8,10 +8,10 @@ echo "Aqui ficará o logo"
     ?>
 
 <ul class="list-unstyled">
-<li><a href="cadastro_produtos.php">Cadastro de Produtos </a></li>
+<li><a href="cadastro_produtos.php">Cadastro de Produtos e planos</a></li>
 <li><a href="cadastro_eventos.php">Cadastro de Eventos </a></li>
 <li><a href="cadastro_atendimentos.php">Cadastro de Atendimentos </a></li>
-<li><a href="relatorio.php">Relatório Financeiro </a></li>
+<!-- <li><a href="relatorio.php">Relatório Financeiro </a></li> -->
 </ul>
 <form role="search">
 <label for="p">busque no site</label>

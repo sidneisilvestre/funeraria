@@ -9,14 +9,14 @@
     <title> Cadastro de eventos </title>
   </head>
   <body>
-  <h1 id="conteudo">Cadastro de eventos </h1>
-<p>Utilize  o formulário abaixo para abrir uma nova solicitação de evento  ou cadastrar um plano de contratação. </p>
+  <h1 id="conteudo">Cadastro de eventos</h1>
+<p>Utilize  o formulário abaixo para abrir uma nova solicitação de evento  ou realizar a venda de um produto individual. </p>
 <form action="eventos_cadastro.php" method="post">
 
 
-<p><a href="cadastro_clientes.php" title="link temporário, posteriormente trabalharemos com validação">Caso o cliente não esteja cadastrado, Clique ou pressione enter aqui para iniciar um novo  cadastro de cliente </a></p>
+<p><a href="cadastro_clientes.php">Caso o cliente não esteja cadastrado, Clique ou pressione enter aqui para iniciar um novo  cadastro de cliente </a></p>
 <label for="cliente">Selecione o nome do cliente  </label>
-<select name="id_cliente" id="cliente" required />
+<select name="id_cliente[]" id="cliente" required />
 <?php 
 include_once "conexao.php";
 $clientes= $cx->query ("select * from clientes order by nome");
@@ -31,7 +31,7 @@ echo "<option value='$cliente[id]'>$cliente[nome] </option>";
 <label for="data">Informe a data do evento </label>
 <input type="date" name="data_evento" id="data" required />
 
-<label for="produto">Selecione o produto desejado pelo cliente  </label>
+<label for="produto">Selecione um plano ou  produto individual desejado pelo cliente  </label>
 <select name="id_produto" id="produto" required />
 <?php 
 $produtos= $cx->query ("select * from produtos order by nome");
@@ -44,6 +44,6 @@ echo "<option value='$produto[id]'>$produto[nome] </option>";
 
 <button type="submit" id="b" class="btn btn-primary">Cadastrar</button>
 </form>
-  
+
   </body>
 </html>
