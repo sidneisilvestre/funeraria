@@ -52,7 +52,7 @@
 include_once "conexao.php";
 $eventos= $cx->query ("select * from eventos order by nome_morto");
 while ($evento = $eventos->fetch_assoc()){
-echo "<option value='evento'>$evento[nome_morto]</option>";
+echo "<option value='evento[id]'>$evento[nome_morto]</option>";
 }
 ?>
 </select>
