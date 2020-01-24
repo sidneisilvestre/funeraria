@@ -16,7 +16,7 @@
 
 <p><a href="cadastro_clientes.php">Caso o cliente não esteja cadastrado, Clique ou pressione enter aqui para iniciar um novo  cadastro de cliente </a></p>
 <label for="cliente">Selecione o nome do cliente  </label>
-<select name="id_cliente[]" id="cliente" required />
+<select name="id_cliente" id="cliente" required />
 <?php 
 include_once "conexao.php";
 $clientes= $cx->query ("select * from clientes order by nome");
