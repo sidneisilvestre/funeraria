@@ -6,7 +6,7 @@
 
         <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css" />
-    <title> Cadastro de eventos </title>
+    <title>Funerária Só falta você - Cadastro de eventos </title>
   </head>
   <body>
   <h1 id="conteudo">Cadastro de eventos</h1>
@@ -44,6 +44,6 @@ echo "<option value='$produto[id]'>$produto[nome] </option>";
 
 <button type="submit" id="b" class="btn btn-primary">Cadastrar</button>
 </form>
-
+<button onclick="javascript:history.back()">Voltar para Home</button>
   </body>
 </html>

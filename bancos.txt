@@ -5,18 +5,9 @@ create table produtos (id int(3) not null auto_increment primary key, nome varch
 
 create table clientes (id int(3) not null auto_increment primary key, nome varchar(80) not null, cpf char(14) not null, telefone1 int(20) not null, telefone2 int(20) not null, email varchar(90) not null) engine innodb;
 
-create table despesas (id int(3) not null auto_increment primary key, km int(7) not null, alimentacao decimal(5,2) not null, pedagio decimal(5,2) not null, combustivel decimal(5,2) not null, mecanica decimal(5,2) not null, obs varchar(200), id_evento int(3), foreign key (id_evento) references eventos(id) on update cascade on delete restrict) engine innodb;
-
 create table eventos (id int(3) not null auto_increment primary key, nome_morto varchar(80) not null, data_evento date not null, id_cliente int(3), id_produto int(3), foreign key(id_cliente) references clientes(id), foreign key(id_produto) references produtos(id)) engine innodb;
 
+create table despesas (id int(3) not null auto_increment primary key, km int(7) not null, alimentacao decimal(5,2) not null, pedagio decimal(5,2) not null, combustivel decimal(5,2) not null, mecanica decimal(5,2) not null, obs varchar(200), id_evento int(3), foreign key (id_evento) references eventos(id) on update cascade on delete restrict) engine innodb;
 
-alguns itens pra testes
-inserindo manualmente em eventos:
-insert into eventos (nome_morto,data_evento,id_cliente,id_produto) values ("Zé Ninguém","20/01/2020","1","1");
-
-inserindo manualmente em despesas para testar:
-insert into despesas (nome,km,despesa,obs,evento_id) values ("zé ninguém","50","90","gasolina","caixão");
-
-
-
-exemplo Código de chave estrangeira: foreign key (produto_id) references produtos(id) on update cascade on delete cascade
+mysql -h alzeinclusiva.com -u alze_funeraria -p 
+funeraria2020

@@ -26,7 +26,7 @@ echo "<tr><th scope='row'>$evento[nome_morto]</th><td>$evento[id_produto]</td></
 </tbody>
 </table>
 
-<button onclick="javascript:history.back()">Voltar</button>
-  
+<button onclick="javascript:history.back()">Cadastrar novo evento</button>
+  <a href="gerente.php" role="button">Ir para a Home </a>
   </body>
 </html>
