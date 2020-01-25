@@ -8,7 +8,7 @@ echo "Aqui ficará o logo"
     ?>
 
 <ul class="list-unstyled">
-<li><a href="cadastro_eventos.php">Cadastro de Eventos e planos</a></li>
+<li><a href="cadastro_eventos.php">Cadastro de Eventos </a></li>
 </ul>
 
 

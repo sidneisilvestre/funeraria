@@ -50,26 +50,26 @@
 <select name="ev" id="ev" />
 <?php
 include_once "conexao.php";
-$eventos= $cx->query ("select * from eventos order by nome_morto");
+$eventos= $cx->query ("select * from eventos order by id");
 while ($evento = $eventos->fetch_assoc()){
-echo "<option value='evento[id]'>$evento[nome_morto]</option>";
+echo "<option value='$evento[id]'>$evento[nome_morto]</option>";
 }
 ?>
 </select>
 </div>
 
 <div class="form-group">
-<fieldset>
+<!-- <fieldset>
 <legend>Status de conclusão do atendimento</legend>
 <label for="atendido">  Atendimento realizado </label>
 <input type="radio" name="status" id="atendido" value="atendido" checked />
 <label for="pendente"> Pendente de atendimento </label>
 <input type="radio" name="status" id="pendente" value="pendente" />
-</fieldset>
+</fieldset> -->
 </div>
 
 
-<button type="button" id="b" class="btn btn-primary">Cadastrar Atendimento</button>
+<button type="submit" id="b" class="btn btn-primary">Finalizar Atendimento</button>
 </form>
 
     
