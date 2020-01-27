@@ -10,7 +10,7 @@
   </head>
   <body>
   <h1 id="conteudo">Relatório de despesas </h1>
-<p>Veja abaixo as despesas já cadastradas por observação.. </p>
+<p>Veja abaixo as despesas já cadastradas por observação. </p>
 <ul>
 <?php 
 include_once "conexao.php";
@@ -22,7 +22,7 @@ echo "<li>$despesa[obs]</li>";
 ?>
 </ul>
 
-
+<a href="gerente.php" role="button">Voltar para Home </a>
 
   
   </body>

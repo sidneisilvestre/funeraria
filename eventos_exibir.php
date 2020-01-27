@@ -13,20 +13,20 @@
 <p> exiba aqui nossos clientes já cadastrados!!!</p>
 
 <table>
-<thead><tr><th scope="col">Nome</th><th scope="col">Produtos escolhidos</th></tr></thead>
+<thead><tr><th scope="col">Nome</th><th scope="col">Produtos escolhidos</th><th scope="col">Cortejo </th></tr></thead>
 <tbody>
 <?php 
 include_once "conexao.php";
 $eventos= $cx->query ("select * from eventos order by nome_morto");
 /*busca os dados no banco */
 while ($evento = $eventos->fetch_assoc()){
-echo "<tr><th scope='row'>$evento[nome_morto]</th><td>$evento[id_produto]</td></tr>";
+echo "<tr><th scope='row'>$evento[nome_morto]</th><td>$evento[id_produto]</td><td>$evento[status]</td></tr>";
 }
 ?>
 </tbody>
 </table>
 
-<button onclick="javascript:history.back()">Voltar</button>
-  
+<button onclick="javascript:history.back()">Cadastrar novo evento</button>
+  <a href="gerente.php" role="button">Ir para a Home </a>
   </body>
 </html>

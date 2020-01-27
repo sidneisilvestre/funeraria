@@ -14,7 +14,9 @@
 <form action="produto-cadastro.php" method="post">
 <label for="prod">Informe o nome do novo Produto ou plano a ser incluído </label>
 <input type="text" name="produto" id="prod" required autocomplete autofocus/>
-<label for="preco">Informe o valor de  venda </label>
+<label for="custo">Informe o valor do custo </label>
+<input type="number" name="custo" id="custo" required />
+<label for="preco">Informe o valor de venda </label>
 <input type="number" name="preco" id="preco" required />
 <button type="submit" id="b" class="btn btn-primary">Cadastrar </button>
 </form>

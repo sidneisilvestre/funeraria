@@ -14,8 +14,20 @@
 <form action="atendimentos_cadastro.php" method="post">
 
 <div class="form-group">
+<label for ="ev">Selecione um Evento cadastrado para atendimento</label>
+<select name="ev" id="ev" autofocus />
+<?php
+include_once "conexao.php";
+$eventos= $cx->query ("select * from eventos order by id");
+while ($evento = $eventos->fetch_assoc()){
+echo "<option value='$evento[id]'>$evento[nome_morto]</option>";
+}
+?>
+</select>
+</div>
+<div class="form-group">
 <label for="km">Informe a Quilometragem percorrida </label>
-<input type="number" name="km" id="km" class="form-control" autofocus />
+<input type="number" name="km" id="km" class="form-control" />
 </div>
 
 <div class="form-group">
@@ -45,18 +57,6 @@
 <input type="text" name="obs" id="obs" class="form-control" />
 </div>
 
-<div class="form-group">
-<label for ="ev">Selecione um Evento cadastrado para atendimento</label>
-<select name="ev" id="ev" />
-<?php
-include_once "conexao.php";
-$eventos= $cx->query ("select * from eventos order by id");
-while ($evento = $eventos->fetch_assoc()){
-echo "<option value='$evento[id]'>$evento[nome_morto]</option>";
-}
-?>
-</select>
-</div>
 
 <div class="form-group">
 <!-- <fieldset>

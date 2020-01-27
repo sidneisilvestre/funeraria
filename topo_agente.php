@@ -17,6 +17,4 @@ echo "Aqui ficará o logo"
 <input type="text" id="p" name="p" />
 <button type="submit">pesquisar</button>
 </form> 
-
-
 </html>
